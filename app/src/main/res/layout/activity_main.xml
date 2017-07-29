@@ -1,18 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
     tools:context="com.example.jisung.snap.MainActivity">
 
-    <TextView
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/good_circle">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="금연"
+                android:textColor="#ffffff"
+                android:textSize="35sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:textColor="#6081bd"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00"
+                        android:textColor="#6081bd"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="일"
+                        android:textColor="#ffffff"
+                        android:textSize="50sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginLeft="20dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="건강상태 : "
+                android:textColor="@color/mainCol"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매우 좋음"
+                android:textColor="#6a70de"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="니코틴 수치 : "
+                android:textColor="@color/mainCol"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0%"
+                android:textColor="@color/mainCol"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bound"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="혈액 순환이 좋아지고,\n폐 기능이 좋아졌습니다!!"
+                android:textColor="@color/mainCol"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보험금 인하에 성공하셨습니다!^^"
+                android:textColor="#6a70de"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <ImageButton
+            android:id="@+id/comBtn"
+            android:layout_width="80dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="@color/mainCol"
+            android:onClick="onClick"
+            android:src="@drawable/community" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="1dp" />
+
+        <ImageButton
+            android:id="@+id/chatBtn"
+            android:layout_width="80dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="@color/mainCol"
+            android:onClick="onClick"
+            android:src="@drawable/chat" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="1dp" />
+
+        <ImageButton
+            android:id="@+id/monBtn"
+            android:layout_width="80dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="@color/mainCol"
+            android:onClick="onClick"
+            android:src="@drawable/money" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="1dp" />
+
+        <ImageButton
+            android:id="@+id/setBtn"
+            android:layout_width="80dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="@color/mainCol"
+            android:onClick="onClick"
+            android:src="@drawable/setting" />
+    </LinearLayout>
+</LinearLayout>
